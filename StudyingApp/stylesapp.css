@@ -8,6 +8,10 @@ h1 {
 }
 
 p.test {
+	display:block;
+	margin:auto;
 	text-align: center;
 	color: black;
+	
 }
+
