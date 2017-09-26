@@ -1,0 +1,93 @@
+
+
+body { 
+margin:auto;
+background-color: gold;
+}
+
+.header {
+	float:left;
+	background: gold;
+	padding:20px;
+	color:black;
+	font-size: 40px;
+	overflow:hidden;
+	display:table;
+	clear:both;
+	
+	}
+	
+img {		
+	border-radius:275px;
+    width: 550px;
+	float:right;
+	clear:both;
+	overflow:hidden;
+}
+
+.footer {
+	float:right;
+	border-style:none;
+	height:auto;
+	width:25%;
+	padding:15px;
+	overflow:hidden;
+	clear:both;
+	display:block;
+	text-align:center;
+	}
+
+.bio {
+	width:auto;
+	margin:auto;
+	
+}
+.section {
+	float: left;
+    width: 25%;
+    padding: 15px;
+	display:block;
+	border-style:none;
+	height:auto;
+	clear:both;
+	text-align:center;
+
+}
+
+
+	
+	
+	
+.sidebar {
+	float:right;
+  display:block;
+	border-style:none;
+	height:auto;
+	overflow:hidden;
+  width: 25%;
+    padding: 15px;
+	clear:both;
+	text-align:center;
+
+}
+
+.content {
+	float:left;
+	display:block;
+	border-style:none;
+	height:auto;
+	overflow:;
+	width: 25%;
+    padding: 15px;
+	clear:both;
+	text-align:center;
+
+}
+
+p {
+font-size:20px;
+} 
+
+h2 {
+	font-size:30px;
+}
