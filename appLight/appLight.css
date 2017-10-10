@@ -1,5 +1,14 @@
 
+body {
+	padding: 1em;
+	background: #d2d4dd;
+	background-size: 8px 8px;
+	font: 100%/1.5 sans-serif;
+	text-shadow: 0 1px 1px white;
+}
+
 .switch {
+	margin: 0;
   position: relative;
   display: block;
   width: 60px;
@@ -23,6 +32,9 @@
 }
 
 .slider:before {
+	margin:0;
+	content:'On';
+	float:left;
   position: absolute;
   content: "";
   height: 26px;
@@ -32,6 +44,7 @@
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+  text-indent:-2.5em;
 }
 
 input:checked + .slider {
@@ -55,4 +68,12 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.slider:after {
+	content: 'Off';
+	float: left;
+	text-indent: .5em;
+	color: rgba(0,0,0,.45);
+	text-shadow: none;
 }
