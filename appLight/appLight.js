@@ -1,6 +1,8 @@
-function myFunction ()
+document.getElementById("#slider").onclick = myFunction;
+function myFunction()
 {
-	document.getElementById(".body").style.color="white";
-	document.getElementById(".switch:after").style.cssFloat="right";
+	document.getElementById("#slider").style.cssFloat="right";
+	document.getElementById("#slider").style.cssFloat="left";
+	document.getElementById("#body").style.color="white";
 	
 }
