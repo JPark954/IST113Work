@@ -1,57 +1,32 @@
-<<<<<<< HEAD
-
-body {
-	padding: 1em;
-	background: white;
-	background-size: 8px 8px;
-	font: 100%/1.5 sans-serif;
-	text-shadow: 0 1px 1px white;
-=======
-input{
-	display:block;
-	visibility: hidden;
+.box{
+	margin:auto;
+	margin-top:20%;
+	border-style:solid;
+	border-radius:360px;
+	border-color: gray;
+	height:120px;
+	width:240px;
 }
 
-label {
-	cursor:pointer;
-	text-indent: -9999px;
-	width: 200px;
-	height: 100px;
-	background: grey;
-	display: block;
-	border-radius: 100px;
-	position: relative;
+#left{
+	float:left;
+	background-color:black;
+	width:120px;
+	height:120px;
+	border-radius:360px;
 }
 
-label:before {
-	content:"Off";
-	position:absolute;
-	top:5px;
-	left:5px;
-	Width:90px;
-	height:90px;
-	background:black;
-	border-radius:90px;
-
-
+#right{
+	float:right;
+	background-color:white;
+	width:120px;
+	height:120px;
+	border-radius:360px;
 }
-label:after {
-	content: "On";
-	position: absolute;
-	top: 5px;
-	left: 5px;
-	width: 90px;
-	height: 90px;
-	background: white;
-	border-radius: 90px;
+
+#slider {
+	text-align: center;
+}
+
 	
-}
-
-body {
-	display:flex ;
-	justify-content: center;
-	align-items: center;
-	height: 50em;
->>>>>>> 0d8bceb409186427dc997543d42c4f86172080f2
-}
-
+	
