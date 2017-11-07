@@ -130,9 +130,7 @@ function loadTaskList(){
 	window.app.start();
 });
 
-function myUndo() {
-	var undo = document.getElementById("undo");
-}	
+
 
 
 
