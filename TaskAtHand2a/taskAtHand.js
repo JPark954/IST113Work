@@ -3,7 +3,7 @@
 
 function taskAtHandApp()
 {
-	var version = "v1.3";
+	var version = "v2.0";
 	appStorage = new appStorage("taskAtHand");
 
 
