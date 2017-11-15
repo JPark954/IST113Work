@@ -1,0 +1,40 @@
+#app
+{
+    background-color: #F69;
+    background: -webkit-linear-gradient(0deg, #bbc, #f60);
+    background: -moz-linear-gradient(0deg, #bbc, #f60);
+    background: -ms-linear-gradient(0deg, #bbc, #f60);
+    background: linear-gradient(0deg, #bbc, #f60);
+}
+
+#main
+{
+	margin:20em auto;
+	min-width:9em;
+	max-width:25em;
+	background: -webkit-linear-gradient(0deg, #bbc, #f60);
+    background: -moz-linear-gradient(0deg, #bbc, #f60);
+    background: -ms-linear-gradient(0deg, #bbc, #f60);
+    background: linear-gradient(0deg, #bbc, #f60);
+
+	
+}
+
+#task-list .task
+{
+	position:relative;
+	margin:0.25em;
+	padding:0.25em;
+	background-color:none;
+	-webkit-transition: all 0.25s ease-in-out;
+	-moz-transition: all 0.25s ease;
+	transition: all 0.25s ease;
+	
+	
+}
+
+#app>header,
+#app>footer
+{
+    background-color: #f60;
+}
