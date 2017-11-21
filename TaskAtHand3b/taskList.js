@@ -69,7 +69,7 @@ function getTaskIndex(taskId)
 }
 this.getTask = function(taskId)
 {
-	vavr index = getTaskIndex(taskId);
+	var index = getTaskIndex(taskId);
 	return(index >= 0 ? tasks[index] : null);
 };
 
