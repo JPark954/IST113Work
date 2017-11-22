@@ -1,0 +1,13 @@
+{
+    "location": {
+		"city":"Fort Lauderdale"
+    }
+	,"current_observation": {
+		"weather":"Clear",
+		"temperature_string":"75 F (24 C)",
+		"wind_string":"From the SE at 6.0 MPH Gusting to 7.0 MPH",
+		"feelslike_string":"75 F (25 C)",
+        "relative_humidity":"82%",
+		"icon_url":"images/nt_clear.gif"
+	}
+}
