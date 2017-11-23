@@ -60,13 +60,14 @@ function getTaskIndex(taskId)
 {
 	for (var i in tasks)
 	{
-		if (tasks[i].id==taskId)
+		if (tasks[i].id == taskId)
 		{
 			return parseInt(i);
 		}
 	}
 	return -1; //not found..
 }
+
 this.getTask = function(taskId)
 {
 	var index = getTaskIndex(taskId);

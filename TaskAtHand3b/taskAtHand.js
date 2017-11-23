@@ -6,7 +6,7 @@ function taskAtHandApp()
 	var version = "v3.3";
 	appStorage = new appStorage("taskAtHand");
 	taskList = new TaskList();
-	timeoutId = 0;
+	timeOutId = 0;
 
 	function setStatus(msg, noFade)
 	{
@@ -36,7 +36,7 @@ function taskAtHandApp()
 		
 		$("#theme").change(onChangeTheme);
 	};
-}
+
 
 function onChangeTheme()
 {
@@ -62,12 +62,12 @@ $("theme>option[value="+ theme + "] ").attr("selected","selected");
 function saveTaskList()
 {
 	
-	if (timeoutId) clearTimeout(timeoutId);
+	if (timeOutId) clearTimeout(timeOutId);
 	setStatus("saving changes...", true);
-	timeoutId = setTimeout(function()
+	timeOutId = setTimeout(function()
 	{
 	appStorage.setValue("taskList", taskList.getTasks());
-	timeoutId = 0;
+	timeOutId = 0;
 	setStatus("changes saved.");
 	},
 	2000);
@@ -76,6 +76,7 @@ function saveTaskList()
 		//tasks.push($(this).text())
 	//});
 }
+
 	
 
 function addTask()
@@ -123,6 +124,8 @@ function addTaskElement(task)
 	blur(function(){
 		$(this).hide().siblings("span.task-name").show();
 	});
+	
+	$task.click(function(){	onSelectTask($task); });
 	$("button.toggle-details", $task).click(function(){
 			toggleDetails($task);
 	});
@@ -136,6 +139,8 @@ function addTaskElement(task)
 		onChangeTaskDetails(task.id, $(this));
 	});
 	
+}
+	
 	function toggleDetails ($task)
 	{
 		$(".details", $task).slideToggle();
@@ -144,9 +149,8 @@ function addTaskElement(task)
 
 	
 	
-	$task.click(function(){
-	onSelectTask($task);
-	});	
+		
+	
 	function onSelectTask($task){
 		if($task)
 		{
@@ -222,6 +226,9 @@ function rebuildTaskList()
 		addTaskElement(task);
 	});
 }
+
+
+
 
 
  $(function() {
