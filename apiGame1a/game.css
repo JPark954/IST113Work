@@ -14,6 +14,7 @@ h1
 
 div 
 {	
+	text-align:center;
 	padding: 0;
 	margin: 0;
 }
@@ -32,6 +33,7 @@ footer
 
 button {
 	cursor: pointer;
+	
 }
 .hidden {
 	display: none;
@@ -45,7 +47,22 @@ button {
 	padding: 0;
 	margin: 4px;
 	background-color: #bbc;
+	font-size: 300%;
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+#shuffle 
+{
+	font-size:0.5em;
+	position: inherit;
+    border: 300px;
+	border-radius: 150px;
+}
+
 #game>header {
 	padding: 0.25em;
 	font-size: 1.5em;
@@ -59,5 +76,6 @@ button {
 	background-color: green;
 }
 #main {
-	margin: 1em;
+	background-color: red;
+	margin: 5em;
 }

@@ -1,18 +1,18 @@
 "use strict";
 
+	
 
-function MyGame()
+function myGame()
 {
-	var version = "v0.1";
-	var deck_ct = 1;
+
+
+	
 	
 	function setStatus(message)
 	{
 		$("#app>footer").text(message);
 		
 	}
-	
-	
 
 	this.start = function()
 	{
