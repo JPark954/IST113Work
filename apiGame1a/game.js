@@ -24,6 +24,6 @@ function myGame()
 } 
 
 $(function() {
-	window.app = new MyGame();
+	window.app = new myGame();
 	window.app.start();
 });
