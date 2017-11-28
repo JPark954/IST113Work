@@ -17,6 +17,26 @@ function taskAtHandApp()
 		}
 	}
 	
+	function saveTaskList()
+	{
+	
+	if (timeOutId) clearTimeout(timeOutId);
+	setStatus("saving changes...", true);
+	timeOutId = setTimeout(function()
+	{
+	appStorage.setValue("taskList", taskList.getTasks());
+	timeOutId = 0;
+	setStatus("changes saved.");
+	},
+	2000);
+	//var tasks = [];
+	//$("#task-list .task span.task-name").each(function(){
+		//tasks.push($(this).text())
+	//});
+
+	}
+	
+	
 	this.start = function()
 	{
 		$("#new-task-name").keypress(function(e) {
@@ -59,23 +79,6 @@ $("theme>option[value="+ theme + "] ").attr("selected","selected");
 }
 
 	
-function saveTaskList()
-{
-	
-	if (timeOutId) clearTimeout(timeOutId);
-	setStatus("saving changes...", true);
-	timeOutId = setTimeout(function()
-	{
-	appStorage.setValue("taskList", taskList.getTasks());
-	timeOutId = 0;
-	setStatus("changes saved.");
-	},
-	2000);
-	//var tasks = [];
-	//$("#task-list .task span.task-name").each(function(){
-		//tasks.push($(this).text())
-	//});
-}
 
 	
 
