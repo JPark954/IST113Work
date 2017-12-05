@@ -1,0 +1,81 @@
+body {
+	font: 1em Verdana, Geneva, sans-serif;
+	padding: 0;
+	margin: 5px;
+	color: Black;
+	background-color: WhiteSmoke;
+}
+
+h1 
+{
+	text-align:center;
+	font-size: 10em;
+}
+
+div 
+{	
+	text-align:center;
+	padding: 0;
+	margin: 0;
+}
+
+header
+{
+	text-align:center;
+}
+
+
+footer
+{
+	text-align: center;
+}
+
+
+button {
+	cursor: pointer;
+	
+}
+.hidden {
+	display: none;
+}
+
+/**************/
+/*    App     */
+/**************/
+
+#game {
+	padding: 0;
+	margin: 4px;
+	background-color: #bbc;
+	font-size: 300%;
+	margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#shuffle 
+{
+	font-size:0.5em;
+	position: inherit;
+    border: 300px;
+	border-radius: 150px;
+}
+
+#game>header {
+	padding: 0.25em;
+	font-size: 1.5em;
+	color: WhiteSmoke;
+	background-color: green;
+}
+#game>footer {
+	padding: 0.25em;
+	font-size: 1.5em;
+	color: WhiteSmoke;
+	background-color: green;
+}
+#main {
+	background-color: gray;
+	margin: 5em;
+}

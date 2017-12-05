@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Game</title>
+		<link href="game.css" rel="StyleSheet" />
+		<script src="lib/jquery-3.2.1.min.js"></script>
+		<script src="game.js"></script>
+		
+	</head>
+	<body>
+		<div id="game">
+			<header>Casino War</header>
+			<div id="warButton">
+				<button onclick="war(this)" id="shuffle" type="button">Declare War!</button>
+				
+			</div>
+			
+			
+			
+			<div id="main">
+				<button onclick="newGame(this)" id="shuffle" type="button">New Game</button>
+				<input id ="CiD" type="text" name="Card" value="">
+			<div id="p1">
+					<button onclick="player1Draw(this)" id="player1" type="button">Player 1 Draw</button>
+					<input id="C1" type="text" name="Card" value="">
+					 
+				</div>
+				
+					<div id="p2">	
+						<button onclick="player2Draw(this)" id="player2" type="button">Player 2 Draw</button>
+						<input id ="C2" type="text" name="Card" value="">
+						
+					</div>	
+						
+			
+			
+			</div>
+			
+			
+					
+			<footer>Lets Play Cards</footer>
+		</div>
+	</body>
+</html>
