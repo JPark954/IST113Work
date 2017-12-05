@@ -8,7 +8,7 @@ var score2 = 0;
 function newGame(){
 
 	$.ajax({
-				//url: "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1", If a new Deck ID is needed
+				
 				url: "https://deckofcardsapi.com/api/deck/b2fp2k3q5jrf/shuffle/",
 				dataType : "json",
 				data: { 
@@ -98,8 +98,7 @@ function player2Draw(){
 							console.log(data.cards["0"])
 							console.log(Card2)							
 							document.getElementById('C2').value= data.cards["0"].value + " of " + data.cards["0"].suit;
-							document.getElementById('CiD').value= data.remaining + " Cards in Deck";
-							/*alert("Player 2 drew a card")*/},
+							document.getElementById('CiD').value= data.remaining + " Cards in Deck";},
 							error: function(xhr) {
 							console.log('error', xhr);
 							
@@ -129,6 +128,6 @@ function war(){
 			
 		}
 		else if(Card1 == Card2){
-			alert("War!");
+			alert("Declare War!");
 		}
 }

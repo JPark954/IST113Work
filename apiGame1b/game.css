@@ -46,7 +46,7 @@ button {
 #game {
 	padding: 0;
 	margin: 4px;
-	background-color: #bbc;
+	background-color: red;
 	font-size: 300%;
 	margin: 0;
     position: absolute;
