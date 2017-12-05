@@ -15,9 +15,9 @@ function newGame(){
 				a: "deck_id"
 					},
 						success: function(data) {
-							console.log('success', data)
-							var id = data.deck_id
-							console.log(id)
+		console.log('success', data)
+		var id = data.deck_id
+			console.log(id)
 							document.getElementById('CiD').value= data.remaining + " Cards in Deck";
 							document.getElementById('C1').value= "";
 							document.getElementById('C2').value= "";
