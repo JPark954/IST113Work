@@ -56,7 +56,7 @@ function player1Draw(){
 								default:
 									Card1 = Number(data.cards["0"].value)
 												}
-							console.log(data.cards["0"])
+							//console.log(data.cards["0"])
 							console.log(Card1)							
 							document.getElementById('C1').value= data.cards["0"].value + " of " + data.cards["0"].suit;
 							document.getElementById('CiD').value= data.remaining + " Cards in Deck";
@@ -95,7 +95,7 @@ function player2Draw(){
 								default:
 									Card2 = Number(data.cards["0"].value)
 												}	
-							console.log(data.cards["0"])
+							//console.log(data.cards["0"])
 							console.log(Card2)							
 							document.getElementById('C2').value= data.cards["0"].value + " of " + data.cards["0"].suit;
 							document.getElementById('CiD').value= data.remaining + " Cards in Deck";},
@@ -118,13 +118,13 @@ function war(){
 		if(Card1 > Card2){
 			alert("Player 1 Wins the Hand!");
 			++score1;
-			console.log("Player 1s Points: " + score1);
+			alert("Player 1s Points: " + score1);
 			
 		}
 		else if(Card1 < Card2){
 			alert("Player 2 Wins the Hand");
 			++score2;
-			console.log("Player 2s Points: " + score2);
+			alert("Player 2s Points: " + score2);
 			
 		}
 		else if(Card1 == Card2){
