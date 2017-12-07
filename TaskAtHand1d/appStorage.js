@@ -1,10 +1,5 @@
-function AppStorage(appName){
-	
-	localStorage.setItem("myKey", "myValue");
-	var value = localStorage.getItem("myKey");
-	
-	var prefix = (appName ? appName + "." : "");	
-	
+function appStorage(appName){
+	var prefix = (appName ? appName + "." : "");
 	this.localStorageSupported = (('localStorage' in window) && window ['localStorage']);
 	
 	this.setValue = function(key, val){

@@ -30,9 +30,10 @@ Task.statuses =
 };
 
 
-function TaskList (tasks)
+function TaskList(tasks)
 {
 	tasks = tasks || [];
+	
 	this.getTasks = function()
 	{
 		return tasks;
@@ -50,7 +51,7 @@ function TaskList (tasks)
 		if (i >= 0)
 		{
 			var task = tasks[i];
-			tasks.splice(i, l);
+			tasks.splice(i, 1);
 			return task;
 		}
 		return null;
