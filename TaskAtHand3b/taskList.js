@@ -1,90 +1,83 @@
 function Task(name)
-{
-	this.name  = name;
-	this.id = Task.nextTaskId++;
-	this.created = new Date();
-	this.priority = Task.priotities.normal;
-	this.status = Task.statuses.notStarted;
-	this.pctComplete = 0;
-	this.startDate = null;
-	this.dueDate = null;
-}
-
-// DEfine "static variable on the task object
+	{
+		this.name = name;
+		this.id = Task.nextTaskId++;
+		this.created = new Date();
+		this.priority = Task.priorities.normal;
+		this.status = Task.statuses.notStarted;
+		this.pctComplete = 0;
+		this.startDate = null;
+		this.dueDate = null;
+	}
 
 Task.nextTaskId = 1;
 Task.priorities = 
-{
-	none: 0,
-	low: 1,
-	normal: 2,
-	high: 3
-};
-
+	{
+		none: 0,
+		low: 1,
+		normal: 2,
+		high: 3
+	};
 Task.statuses = 
-{ 
-	none: 0,
-	notStarted: 1,
-	started: 2,
-	completed: 3
-};
-
+	{
+		none: 0,
+		notStarted: 1,
+		started: 2,
+		completed: 3
+	};
 
 function TaskList(tasks)
 {
-	tasks = tasks || [];
-	
+		tasks = tasks || [];
+
+
 	this.getTasks = function()
-	{
-		return tasks;
-	};
-	
+		{
+			return tasks;
+		};
+
 	this.addTask = function(task)
-	{
-		tasks.push(task);
-		return this;
-	}
-	
+		{
+			tasks.push(task);
+			return this;
+		};
+
 	this.removeTask = function(taskId)
-	{
-		var i = getTaskIndex(taskId);
-		if (i >= 0)
 		{
-			var task = tasks[i];
-			tasks.splice(i, 1);
-			return task;
+			var i = getTaskIndex(taskId);
+			if (i >= 0)
+				{
+					var task = tasks[i];
+					tasks.splice(i, 1);
+					return task;
+				}
+			return null;
+		};
+
+	function getTaskIndex(taskId)
+	{
+		for(var i in tasks)
+		{
+			if(tasks[i].id == taskId)
+			{
+				return parseInt(i);
+			}
 		}
-		return null;
+		return -1;
+	}
+
+	this.getTask = function(taskId)
+	{
+		var index = getTaskIndex(taskId);
+		return (index >= 0 ? tasks[index] : null);
 	};
-	
-function getTaskIndex(taskId)
-{
-	for (var i in tasks)
+
+	this.each = function(callback)
 	{
-		if (tasks[i].id == taskId)
+		for(var i in tasks)
 		{
-			return parseInt(i);
+			callback(tasks[i]);
 		}
-	}
-	return -1; //not found..
+	};
+
 }
-
-this.getTask = function(taskId)
-{
-	var index = getTaskIndex(taskId);
-	return(index >= 0 ? tasks[index] : null);
-};
-
-this.each = function(callback)
-{
-	for (var i in tasks)
-	{
-		callback(tasks[i]);
-	}
-};
-}
-	
-	
-	
-	
-

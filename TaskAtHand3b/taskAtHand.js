@@ -1,12 +1,14 @@
 "use strict";
 
-
+// using a function contructor form to create an object
 function TaskAtHandApp()
 {
-	var version = "v3.3";
-		appStorage = new AppStorage("taskAtHand");
-		taskList = new TaskList();
-		timeoutId = 0;
+	var version = "v3.3",
+	appStorage = new AppStorage("taskAtHand"),
+	taskList = new TaskList(),
+	timeoutId = 0;
+	
+
 
 	function setStatus(msg, noFade)
 	{
@@ -16,7 +18,25 @@ function TaskAtHandApp()
 			$("#app>footer").fadeOut(1000);
 		}
 	}
-	
+	this.start = function()
+	{
+
+		$("#theme").change(onChangeTheme);
+		
+		$("#new-task-name").keypress(function(e){
+			if (e.which == 13) 
+			{
+				addTask();
+				return false;
+			}
+		})
+		.focus();
+		
+		$("#app>header").append(version);
+		loadTheme();
+		loadTaskList();
+		setStatus("ready");
+	};
 	
 	
 	function addTask()
@@ -201,30 +221,9 @@ function TaskAtHandApp()
 				.attr("selected","selected");
 		}
 	}
-
-this.start = function()
-	{
-
-		$("#theme").change(onChangeTheme);
-		
-		$("#new-task-name").keypress(function(e){
-			if (e.which == 13) 
-			{
-				addTask();
-				return false;
-			}
-		})
-		.focus();
-		
-		$("#app>header").append(version);
-		loadTheme();
-		loadTaskList();
-		setStatus("ready");
-	};
-}
+} 
 
 $(function() {
 	window.app = new TaskAtHandApp();
 	window.app.start();
 });
-
