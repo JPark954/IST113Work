@@ -8,17 +8,28 @@
 		
 	</head>
 	<body>
+	
+	
+
 		<div id="game">
 			<header>Casino War</header>
+			<div id="playerPic1">
+				<p> Player 1</p>				
+				<img id ="pic1" src="">						 
+			</div>
+			
+			<div id="playerPic2">
+				<p> Player 2</p>
+				<img id="pic2" src="">											
+			</div>
+			
+			
+			<div id="main">
 			<div id="warButton">
 				<button onclick="war(this)" id="shuffle" type="button">Declare War!</button>
 				
 			</div>
-			
-			
-			
-			<div id="main">
-				<button onclick="newGame(this)" id="shuffle" type="button">New Game</button>
+				<button onclick="newGame(this)" id="shuffle2" type="button">New Game</button>
 				<input id ="CiD" type="text" name="Card" value="">
 			<div id="p1">
 					<button onclick="player1Draw(this)" id="player1" type="button">Player 1 Draw</button>
@@ -35,10 +46,13 @@
 			
 			
 			</div>
+				
 			
 			
 					
 			<footer>Lets Play War</footer>
+		
+	
 		</div>
 	</body>
 </html>

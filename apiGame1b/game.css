@@ -1,34 +1,5 @@
-body {
-	font: 1em Verdana, Geneva, sans-serif;
-	padding: 0;
-	margin: 5px;
-	color: Black;
-	background-color: WhiteSmoke;
-}
-
-h1 
-{
-	text-align:center;
-	font-size: 10em;
-}
-
-div 
-{	
-	text-align:center;
-	padding: 0;
-	margin: 0;
-}
-
-header
-{
-	text-align:center;
-}
 
 
-footer
-{
-	text-align: center;
-}
 
 
 button {
@@ -44,32 +15,54 @@ button {
 /**************/
 
 #game {
-	padding: 0;
-	margin: 4px;
-	background-color: red;
-	font-size: 300%;
 	margin: 0;
+	background-color: gray;
+	font-size: 400%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#shuffle 
-{
+
+#pics{
+	height: 25%;
+	width: 25%;
+	
+}
+
+#playerPic1{
+	padding-top:3em;
+	float:left;
+	color: black;
+}
+
+#playerPic2{
+	padding-top:3em;
+	float:right;
+	color: black;
+}
+
+#warButton{
+	padding-left:0.525em;
+}
+
+#shuffle{
 	font-size:0.5em;
 	position: inherit;
     border: 300px;
 	border-radius: 150px;
 }
 
-#game>header {
+#game>header{
+	text-align: center;
 	padding: 0.25em;
 	font-size: 1.5em;
 	color: WhiteSmoke;
 	background-color: green;
 }
 #game>footer {
+	text-align: center;
 	padding: 0.25em;
 	font-size: 1.5em;
 	color: WhiteSmoke;
@@ -77,5 +70,5 @@ button {
 }
 #main {
 	background-color: gray;
-	margin: 5em;
+	margin:4em;
 }

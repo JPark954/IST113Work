@@ -20,7 +20,9 @@ function newGame(){
 			console.log(id)
 							document.getElementById('CiD').value= data.remaining + " Cards in Deck";
 							document.getElementById('C1').value= "";
+							document.getElementById('pic1').src = "";
 							document.getElementById('C2').value= "";
+							document.getElementById('pic2').src = "";
 							setTimeout("hide()", 2750);},
 							
 						error: function(xhr) {
@@ -56,10 +58,12 @@ function player1Draw(){
 								default:
 									Card1 = Number(data.cards["0"].value)
 												}
-							//console.log(data.cards["0"])
+							console.log(data.cards["0"])
 							console.log(Card1)							
 							document.getElementById('C1').value= data.cards["0"].value + " of " + data.cards["0"].suit;
+							document.getElementById('pic1').src = data.cards["0"].image;
 							document.getElementById('CiD').value= data.remaining + " Cards in Deck";
+							setTimeout("hide()", 1600);
 							},
 						error: function(xhr) {
 							console.log('error', xhr);
@@ -95,10 +99,12 @@ function player2Draw(){
 								default:
 									Card2 = Number(data.cards["0"].value)
 												}	
-							//console.log(data.cards["0"])
+							console.log(data.cards["0"])
 							console.log(Card2)							
 							document.getElementById('C2').value= data.cards["0"].value + " of " + data.cards["0"].suit;
-							document.getElementById('CiD').value= data.remaining + " Cards in Deck";},
+							document.getElementById('pic2').src = data.cards["0"].image;
+							document.getElementById('CiD').value= data.remaining + " Cards in Deck";
+							setTimeout("hide()", 1600);					},
 							error: function(xhr) {
 							console.log('error', xhr);
 							
